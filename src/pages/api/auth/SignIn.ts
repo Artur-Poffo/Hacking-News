@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken'
 
 type Data = {
   success: boolean
-  message?: string
+  message: string
   token?: string
   data?: unknown
 }
@@ -45,12 +45,12 @@ export default async function handler(
       } catch (error) {
         res.status(500).json({
           success: false,
-          message: 'Erro ao entrar :(',
+          message: 'Erro ao entrar, tente novamente mais tarde!',
           data: error,
         })
       }
     } else {
-      res.status(500).json({ success: false, message: 'Conta inexistente' })
+      res.status(500).json({ success: false, message: 'Conta não encontrada' })
     }
   } else {
     res.status(500).json({ success: false, message: 'Método não suportado' })

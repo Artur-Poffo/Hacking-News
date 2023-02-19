@@ -4,7 +4,7 @@ import User, { IUser } from '@/utils/Models/UserModel'
 
 type Data = {
   success: boolean
-  message?: string
+  message: string
   data?: unknown
 }
 
@@ -28,17 +28,19 @@ export default async function handler(
         const newUser = await User.create(req.body)
         res.status(200).json({
           success: true,
-          message: 'Conta Criada',
+          message: 'Conta criada com sucesso!',
         })
       } catch (error) {
         res.status(500).json({
           success: false,
-          message: 'Erro ao criar a conta :(',
+          message: 'Erro ao criar a conta',
           data: error,
         })
       }
     } else {
-      res.status(500).json({ success: false, message: 'Email em uso' })
+      res
+        .status(500)
+        .json({ success: false, message: 'Esse email já está sendo utilizado' })
     }
   } else {
     res.status(500).json({ success: false, message: 'Método não suportado' })
