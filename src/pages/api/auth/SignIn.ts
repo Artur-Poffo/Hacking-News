@@ -23,24 +23,21 @@ export default async function handler(
       password: req.body.password,
     }
 
-    const searchEmail = await User.findOne(
-      { email: toVerifyUser.email },
-      '-password',
-    )
+    const searchEmail = await User.findOne({ email: toVerifyUser.email })
 
-    if (searchEmail !== null) {
+    if (
+      searchEmail !== null &&
+      toVerifyUser.password === searchEmail.password
+    ) {
       try {
         const secret = process.env.SECRET
 
         const token = jwt.sign({ id: searchEmail._id }, `${secret}`)
 
-        const user = { ...searchEmail._doc }
-
         res.status(200).json({
           success: true,
           token,
           message: 'Sucesso ao entrar!',
-          data: user,
         })
       } catch (error) {
         res.status(500).json({
