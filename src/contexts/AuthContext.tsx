@@ -1,3 +1,5 @@
+'use client'
+
 import React, { createContext, ReactNode, useState } from 'react'
 import { setCookie } from 'nookies'
 import { useRouter } from 'next/navigation'

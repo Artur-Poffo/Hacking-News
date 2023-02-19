@@ -1,3 +1,5 @@
+'use client'
+
 import { ReactNode, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { parseCookies } from 'nookies'
@@ -14,7 +16,7 @@ export default function PrivateRoute({ children }: Props) {
     if (!token) {
       push('/SignIn')
     }
-  }, [])
+  })
 
   return (
     <>
