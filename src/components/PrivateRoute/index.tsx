@@ -1,12 +1,13 @@
 import { ReactNode, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import { parseCookies } from 'nookies'
 
 interface Props {
   children: ReactNode
 }
 
 export default function PrivateRoute({ children }: Props) {
-  const token = localStorage.getItem('blog.token')
+  const { 'blog.token': token } = parseCookies()
   const { push } = useRouter()
 
   useEffect(() => {

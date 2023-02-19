@@ -1,17 +1,15 @@
 import React, { createContext, ReactNode, useState } from 'react'
+import { setCookie } from 'nookies'
 import { useRouter } from 'next/navigation'
 
 import api from '@/services/api'
 import { IAuthParams } from '@/interfaces/AuthParams'
-import { IUser } from '@/interfaces/IUser'
 
 interface AuthContextData {
-  isAuthenticated: boolean
   SignIn: (data: IAuthParams) => Promise<void>
   SignUp: (data: IAuthParams) => Promise<void>
   error: any | null
   setError: (argument: unknown) => void
-  user: IUser | null
 }
 
 export const AuthContext = createContext({} as AuthContextData)
@@ -21,22 +19,22 @@ interface Props {
 }
 
 export default function AuthProvider({ children }: Props) {
-  const [user, setUser] = useState<IUser | null>(null)
   const [error, setError] = useState<any | null>(null)
-  const isAuthenticated = !!user
   const { push } = useRouter()
 
   async function SignIn(data: IAuthParams) {
     try {
       const res = await api.post('api/auth/SignIn', data)
-      const { token, user } = res.data
+      const { token } = res.data
 
-      localStorage.setItem('blog.token', token)
+      setCookie(null, 'blog.token', token, {
+        maxAge: 3600,
+      })
 
-      setUser(user)
       push('/')
     } catch (err: any) {
       setError(err)
+      console.error(err)
     }
   }
 
@@ -48,15 +46,14 @@ export default function AuthProvider({ children }: Props) {
       console.log(success, message)
 
       push('/SignIn')
-    } catch (err) {
+    } catch (err: any) {
       setError(err)
+      console.error(err)
     }
   }
 
   return (
-    <AuthContext.Provider
-      value={{ isAuthenticated, SignIn, SignUp, user, error, setError }}
-    >
+    <AuthContext.Provider value={{ SignIn, SignUp, error, setError }}>
       {children}
     </AuthContext.Provider>
   )
