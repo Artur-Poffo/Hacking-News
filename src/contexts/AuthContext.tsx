@@ -1,7 +1,7 @@
 'use client'
 
 import React, { createContext, ReactNode, useState } from 'react'
-import { setCookie } from 'nookies'
+import nookies from 'nookies'
 import { useRouter } from 'next/navigation'
 
 import api from '@/services/api'
@@ -29,7 +29,7 @@ export default function AuthProvider({ children }: Props) {
       const res = await api.post('api/auth/SignIn', data)
       const { token } = res.data
 
-      setCookie(null, 'blog.token', token, {
+      nookies.set(null, 'blog.token', token, {
         maxAge: 3600,
       })
 
