@@ -7,5 +7,6 @@ export const Topic = styled.li`
   text-align: center;
   padding: 5px 10px;
   background-color: ${({ theme }) => theme.COLORS.PRIMARY};
+  color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
   border-radius: 5px;
 `

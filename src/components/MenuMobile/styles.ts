@@ -15,8 +15,8 @@ export const Menu = styled.div`
     right: 30px;
     width: 40px;
     height: 40px;
-    background-color: ${({ theme }) => theme.COLORS.CONTRAST};
-    border-radius: 20%;
+    background-color: ${({ theme }) => theme.COLORS.PRIMARY};
+    border-radius: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +28,7 @@ export const Menu = styled.div`
     div {
       width: 75%;
       height: 3px;
-      background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
+      background-color: ${({ theme }) => theme.COLORS.TITLE_COLOR};
     }
   }
 `
@@ -40,7 +40,7 @@ export const OverLay = styled.div<Props>`
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: ${({ theme }) => theme.COLORS.SECONDARY};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
     display: flex;
     flex-direction: column;
     align-items: center;

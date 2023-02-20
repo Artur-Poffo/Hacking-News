@@ -6,7 +6,8 @@ export const Container = styled.nav`
   position: fixed;
   width: 100vw;
   padding: 30px 50px;
-  background-color: ${({ theme }) => theme.COLORS.SECONDARY};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
+  border-bottom: 2px solid ${({ theme }) => theme.COLORS.BORDER};
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -1,13 +1,22 @@
 export default {
   COLORS: {
-    BACKGROUND: '#FFFFFF',
+    BACKGROUND: '#18181B',
 
-    CONTRAST: '#000000',
+    CONTRAST: '#27272a',
 
-    PRIMARY: '#7f7f7f',
-    SECONDARY: '#e8e5e480',
+    PRIMARY: '#52525b',
+    SECONDARY: '#282c34',
 
-    TEXT_PRIMARY: '#000000',
-    TEXT_SECONDARY: '#FFFFFF',
+    BORDER: 'rgb(82, 82, 91)',
+
+    LIGHT_LINK: '#60a5fa',
+    STRONG_LINK: '#2563eb',
+
+    QUOTE_BACKGROUND: '#064e3b',
+    BORDER_QUOTE: '#059669',
+
+    TITLE_COLOR: '#FFFFFF',
+    TEXT_PRIMARY: '#d4d4d8',
+    TEXT_SECONDARY: '#f4f4f5',
   },
 }

@@ -11,8 +11,8 @@ export const Form = styled.form`
   button {
     width: 100%;
     padding: 15px 15px;
-    background-color: ${({ theme }) => theme.COLORS.PRIMARY};
-    color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};
+    background-color: ${({ theme }) => theme.COLORS.CONTRAST};
+    color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
     border-radius: 5px;
     margin-bottom: 20px;
     transition: all 0.3s ease;
@@ -24,7 +24,7 @@ export const Form = styled.form`
   }
 
   a {
-    color: #469bd2;
+    color: ${({ theme }) => theme.COLORS.LIGHT_LINK};
     text-decoration: underline;
   }
 
@@ -49,12 +49,14 @@ export const InputArea = styled.div`
     input {
       width: 100%;
       padding: 10px 15px;
-      border: 2px solid ${({ theme }) => theme.COLORS.PRIMARY};
+      background-color: ${({ theme }) => theme.COLORS.CONTRAST};
+      color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
+      border: 2px solid ${({ theme }) => theme.COLORS.CONTRAST};
       border-radius: 5px;
     }
 
     span {
-      color: red;
+      color: crimson;
       letter-spacing: 0.5px;
     }
   }

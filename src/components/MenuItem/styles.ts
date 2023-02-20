@@ -18,7 +18,7 @@ export const ItemContainer = styled.li<ItemProp>`
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: ${({ theme }) => theme.COLORS.CONTRAST};
+    background-color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
     opacity: ${({ active }) => (active ? 1 : 0)};
     transition: all 0.4s ease;
   }

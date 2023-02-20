@@ -44,6 +44,6 @@ export const GlobalStyles = createGlobalStyle`
   
   body {
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
-    color: ${({ theme }) => theme.COLORS.CONTRAST};
+    color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
   }
 `

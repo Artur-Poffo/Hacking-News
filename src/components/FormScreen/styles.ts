@@ -12,7 +12,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.COLORS.CONTRAST};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
 
   @media (max-width: 1460px) {
     padding: 0 20px;
@@ -31,7 +31,7 @@ export const FormArea = styled.div`
   z-index: 800;
 
   h1 {
-    color: ${({ theme }) => theme.COLORS.CONTRAST};
+    color: ${({ theme }) => theme.COLORS.TITLE_COLOR};
     text-transform: uppercase;
     letter-spacing: 2px;
   }

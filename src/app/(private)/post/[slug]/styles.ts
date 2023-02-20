@@ -5,7 +5,7 @@ import styled from 'styled-components'
 export const Container = styled.article`
   width: 100vw;
   min-height: 100vh;
-  padding: 110px 0px 80px 0;
+  padding: 130px 0px 80px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,12 +16,13 @@ export const Header = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   margin-bottom: 30px;
 
   h1 {
     text-align: center;
     font-size: 3rem;
+    color: ${({ theme }) => theme.COLORS.TITLE_COLOR};
   }
 `
 
@@ -29,12 +30,12 @@ export const Tags = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 
   ul {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
   }
 `
 
@@ -43,13 +44,16 @@ export const Author = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 3px;
+  text-align: center;
 
   span {
+    color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
     font-weight: bold;
   }
 
   a {
-    color: #60a5fa;
+    font-size: 0.8rem;
+    color: ${({ theme }) => theme.COLORS.LIGHT_LINK};
   }
 `
 
@@ -63,15 +67,17 @@ export const Content = styled.div`
 
   p {
     line-height: 32px;
+    color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
   }
 
   a {
-    color: #2563eb;
+    color: ${({ theme }) => theme.COLORS.STRONG_LINK};
     text-decoration: underline;
     font-weight: bold;
   }
 
   h2 {
+    color: ${({ theme }) => theme.COLORS.TITLE_COLOR};
     padding: 15px 0;
     font-size: 2rem;
     font-weight: bolder;
@@ -84,23 +90,24 @@ export const Content = styled.div`
   pre {
     padding: 20px 10px;
     margin: 10px 0;
-    background-color: #282c34;
-    color: #eee;
+    background-color: ${({ theme }) => theme.COLORS.SECONDARY};
+    color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
     border-radius: 5px;
+    white-space: pre-wrap;
 
     code {
       padding: 0;
     }
 
     @media (max-width: 510px) {
-      overflow-x: scroll;
+      overflow-x: auto;
     }
   }
 
   code {
     padding: 5px;
-    background-color: #282c34;
-    color: #eee;
+    background-color: ${({ theme }) => theme.COLORS.SECONDARY};
+    color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
     border-radius: 5px;
   }
 
@@ -121,9 +128,9 @@ export const Content = styled.div`
     align-self: center;
     width: 100%;
     padding: 30px 20px;
-    background-color: #064e3b;
-    color: #eee;
-    border-left: 4px solid #059669;
+    background-color: ${({ theme }) => theme.COLORS.QUOTE_BACKGROUND};
+    color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
+    border-left: 4px solid ${({ theme }) => theme.COLORS.BORDER_QUOTE};
     border-radius: 5px;
   }
 `
