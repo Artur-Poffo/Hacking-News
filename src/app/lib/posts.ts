@@ -15,6 +15,8 @@ const getPosts = async () => {
       return {
         slug: filename.replace(/\.md$/, ''),
         title: document.data.title,
+        desc: document.data.description,
+        image: document.data.image,
         date: document.data.date,
         topics: document.data.topics,
         markdown: document.content,

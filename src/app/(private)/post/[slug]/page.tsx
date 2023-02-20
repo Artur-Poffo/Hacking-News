@@ -1,6 +1,8 @@
 import { Container, Header, Tags, Author, Content, Warning } from './styles'
 import ReactMarkdown from 'react-markdown'
 
+import Layout from '@/components/Layout'
+
 import { DefaultTopic } from '@/components/DefaultTopic'
 import Link from 'next/link'
 
@@ -17,28 +19,30 @@ export default async function Post({ params }: PostProps) {
   const post = posts.find((post) => post.slug === params.slug)
 
   return post ? (
-    <Container>
-      <Header>
-        <h1>{post.title}</h1>
-        <Tags>
-          <span>{post.date}</span>
-          <ul>
-            {post.topics.map((topic: string) => {
-              return <DefaultTopic key={topic} text={topic} />
-            })}
-          </ul>
-        </Tags>
+    <Layout>
+      <Container>
+        <Header>
+          <h1>{post.title}</h1>
+          <Tags>
+            <span>{post.date}</span>
+            <ul>
+              {post.topics.map((topic: string) => {
+                return <DefaultTopic key={topic} text={topic} />
+              })}
+            </ul>
+          </Tags>
 
-        <Author>
-          <span>Artur Poffo</span>
-          <a href="https://github.com/Artur-Poffo">@Artur-Poffo</a>
-        </Author>
-      </Header>
+          <Author>
+            <span>Artur Poffo</span>
+            <a href="https://github.com/Artur-Poffo">@Artur-Poffo</a>
+          </Author>
+        </Header>
 
-      <Content>
-        <ReactMarkdown>{post.markdown}</ReactMarkdown>
-      </Content>
-    </Container>
+        <Content>
+          <ReactMarkdown>{post.markdown}</ReactMarkdown>
+        </Content>
+      </Container>
+    </Layout>
   ) : (
     <Warning>
       <h1>Post não encontrado</h1>

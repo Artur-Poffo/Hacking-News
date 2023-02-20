@@ -1,5 +1,7 @@
 ---
 title: "Tutorial: Criando um blog com Next.js"
+image: "https://www.lucascaton.com.br/_next/image?url=%2Fimages%2Fposts%2F2021%2F12%2Fblog-com-nextjs.jpg&w=384&q=75"
+description: "Criando um blog com Next.js, para iniciantes!"
 date: "Domingo, 19 de fevereiro de 2023"
 topics: ["tutoriais", "reactjs", "nextjs"]
 ---

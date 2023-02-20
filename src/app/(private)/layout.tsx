@@ -21,7 +21,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   const MenuItems: IMenuLink[] = [
     { text: 'Home', to: '/' },
     { text: 'Sobre', to: '/Sobre' },
-    { text: 'Posts', to: '/Posts' },
+    {
+      text: 'Source on GitHub',
+      to: 'https://github.com/Artur-Poffo/Hacking-News',
+    },
   ]
 
   return (
