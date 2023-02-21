@@ -50,19 +50,19 @@ Here are the technologies used in this project.
 
 ### 1 - When you access for the first time, you will see the SignIn page <3
 
-![SignIn Page Print](https://github.com/Artur-Poffo/Hacking-News/tree/main/public/readme/SignIn.png)
+![SignIn Page Print](https://github.com/Artur-Poffo/Hacking-News/tree/main/public/readme/SignIn.png?raw=true)
 
 ### 2 - You need create your account and login to access the homepage.
 
-![SignUp Page Print](https://github.com/Artur-Poffo/Hacking-News/tree/main/public/readme/SignUp.png)
+![SignUp Page Print](https://github.com/Artur-Poffo/Hacking-News/tree/main/public/readme/SignUp.png?raw=true)
 
 ### 3 - After logging in you will have the JWT token saved in your browser cookies and you will have free access to the site until the cookie expires
 
-![Home Page Print](https://github.com/Artur-Poffo/Hacking-News/tree/main/public/readme/Home.png)
+![Home Page Print](https://github.com/Artur-Poffo/Hacking-News/tree/main/public/readme/Home.png?raw=true)
 
 ### 4 - and you will be able to read the posts freely
 
-![Post Page Print](https://github.com/Artur-Poffo/Hacking-News/tree/main/public/readme/Post.png)
+![Post Page Print](https://github.com/Artur-Poffo/Hacking-News/tree/main/public/readme/Post.png?raw=true)
 
 
 ## Features
