@@ -79,7 +79,7 @@ export const Content = styled.div`
   h2 {
     color: ${({ theme }) => theme.COLORS.TITLE_COLOR};
     line-height: initial;
-    padding: 15px 0;
+    padding: 20px 0;
     font-size: 2rem;
     font-weight: bolder;
 
