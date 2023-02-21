@@ -18,8 +18,8 @@ export const Container = styled.div`
     h1 {
       font-size: 3rem;
       margin-bottom: 20px;
-      
-      @media(max-width: 500px) {
+
+      @media (max-width: 500px) {
         font-size: 2rem;
       }
     }
