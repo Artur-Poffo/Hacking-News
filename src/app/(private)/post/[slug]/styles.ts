@@ -141,6 +141,7 @@ export const Content = styled.div`
 `
 
 export const Warning = styled.h1`
+  padding: 0 20px;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
