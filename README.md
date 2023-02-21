@@ -1,9 +1,5 @@
-<!-- ![Logo of the project](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/app/assets/images/logo.png) -->
-
-
 # Hacking News (School Project)
 This is a school project of technology and web security
-
 
 ## Technologies 
 
@@ -54,22 +50,19 @@ Here are the technologies used in this project.
 
 ### 1 - When you access for the first time, you will see the SignIn page <3
 
-<!-- ![Homepage image](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/home.png) -->
+![SignIn Page Print](https://github.com/Artur-Poffo/Hacking-News/tree/main/public/readme/SignIn.png)
 
 ### 2 - You need create your account and login to access the homepage.
 
-<!-- ![Posts](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/posts.png) -->
+![SignUp Page Print](https://github.com/Artur-Poffo/Hacking-News/tree/main/public/readme/SignUp.png)
 
 ### 3 - After logging in you will have the JWT token saved in your browser cookies and you will have free access to the site until the cookie expires
 
-<!-- ![Post show](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/post_1.png)
-![Post show](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/post_2.png)
-![Post show](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/post_3.png) -->
+![Home Page Print](https://github.com/Artur-Poffo/Hacking-News/tree/main/public/readme/Home.png)
 
 ### 4 - and you will be able to read the posts freely
 
-<!-- ![Portfolio](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/portfolio_1.png)
-![Portfolio](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/portfolio_2.png) -->
+![Post Page Print](https://github.com/Artur-Poffo/Hacking-News/tree/main/public/readme/Post.png)
 
 
 ## Features

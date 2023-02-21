@@ -78,6 +78,7 @@ export const Content = styled.div`
 
   h2 {
     color: ${({ theme }) => theme.COLORS.TITLE_COLOR};
+    line-height: initial;
     padding: 15px 0;
     font-size: 2rem;
     font-weight: bolder;
@@ -85,6 +86,10 @@ export const Content = styled.div`
     @media (max-width: 420px) {
       font-size: 1.5rem;
     }
+  }
+
+  h3 {
+    color: ${({ theme }) => theme.COLORS.TITLE_COLOR};
   }
 
   pre {
