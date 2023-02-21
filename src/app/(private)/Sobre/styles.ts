@@ -5,7 +5,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 100vw;
   min-height: 100vh;
-  padding: 110px 0 80px 0;
+  padding: 110px 20px 80px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,6 +18,10 @@ export const Container = styled.div`
     h1 {
       font-size: 3rem;
       margin-bottom: 20px;
+      
+      @media(max-width: 500px) {
+        font-size: 2rem;
+      }
     }
 
     p {
