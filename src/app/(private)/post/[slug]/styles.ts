@@ -13,6 +13,7 @@ export const Container = styled.article`
 
 export const Header = styled.div`
   max-width: 700px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +24,10 @@ export const Header = styled.div`
     text-align: center;
     font-size: 3rem;
     color: ${({ theme }) => theme.COLORS.TITLE_COLOR};
+
+    @media (max-width: 550px) {
+      font-size: 2.3rem;
+    }
   }
 `
 
@@ -93,19 +98,21 @@ export const Content = styled.div`
   }
 
   pre {
+    width: 100%;
     padding: 20px 10px;
     margin: 10px 0;
     background-color: ${({ theme }) => theme.COLORS.SECONDARY};
     color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
     border-radius: 5px;
-    white-space: pre-wrap;
+    overflow-x: scroll;
 
     code {
       padding: 0;
     }
 
-    @media (max-width: 510px) {
-      overflow-x: auto;
+    @media (max-width: 710px) {
+      align-self: center;
+      max-width: 95vw;
     }
   }
 
