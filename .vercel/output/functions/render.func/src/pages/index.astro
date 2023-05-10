@@ -1,0 +1,20 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+
+const Posts = await Astro.glob("../content/blog/*.md");
+const categories = [...new Set(Posts.map(post => post.frontmatter.category))];
+---
+
+<!DOCTYPE html>
+<DefaultLayout>
+	<div class="flex flex-col gap-8">
+		<h1 class="text-orange-500 text-3xl uppercase" >Categorias:</h1>
+		<div class="flex gap-4 flex-wrap" >
+			{categories.map(category => {
+				return (
+				<a href={`/posts/${category}`} class="text-orange-500 underline text-lg">{category}</a>
+				)
+			})}
+		</div>
+	</div>
+</DefaultLayout>

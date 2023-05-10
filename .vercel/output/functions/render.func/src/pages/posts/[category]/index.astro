@@ -1,0 +1,41 @@
+---
+import BlogPost from "../../../components/BlogPost.astro";
+import PostNotFound from "../../../components/PostNotFound.astro";
+import DefaultLayout from "../../../layouts/DefaultLayout.astro";
+
+const Posts = await Astro.glob("../../../content/blog/*.md");
+const filtredPosts = Posts.filter(
+	(post) => post.frontmatter.category === Astro.params.category
+);
+
+export async function getStaticPaths() {
+	const Posts = await Astro.glob("../../../content/blog/*.md");
+	const categories = [...new Set(Posts.map(post => post.frontmatter.category))];
+
+	return categories.map(category => {
+		return {params: {category: category}}
+	})
+}
+---
+
+<!DOCTYPE html>
+<DefaultLayout>
+	{
+		filtredPosts.length > 0 ? (
+			<div class="flex items-start justify-center flex-wrap gap-8">
+				{filtredPosts.map((post) => {
+					return (
+						<BlogPost
+							title={post.frontmatter.title}
+							category={post.frontmatter.category}
+							description={post.frontmatter.description}
+							image={post.frontmatter.heroImage}
+						/>
+					);
+				})}
+			</div>
+		) : (
+			<PostNotFound />
+		)
+	}
+</DefaultLayout>
