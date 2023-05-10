@@ -1,25 +1,17 @@
 ---
-import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
 ---
 
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
+<header class="w-full py-4 gap-8 flex items-center justify-center backdrop-blur-md fixed top-0" >
+	<a href="/">
+		<h2 class="font-bold font-mono text-xl text-zinc-300">
+			{SITE_TITLE}
+		</h2>
+	</a>
+	<nav class="flex items-center gap-4" >
 		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
 		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
+		<HeaderLink href="https://github.com/Artur-Poffo/Hacking-News" target="_blank">Source on GitHub</HeaderLink>
 	</nav>
 </header>
-<style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
-</style>

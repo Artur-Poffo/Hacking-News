@@ -1,0 +1,22 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION,SITE_TITLE } from '../consts';
+---
+
+<html lang="pt">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+
+	<body class="bg-zinc-900 text-zinc-200">
+		<Header />
+		<main class="min-h-screen flex flex-col items-center mt-24" >
+			<div class="w-3/5" >
+				<slot />
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
