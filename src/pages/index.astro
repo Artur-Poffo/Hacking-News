@@ -1,6 +1,5 @@
 ---
 import DefaultLayout from "../layouts/DefaultLayout.astro";
-export const prerender = true;
 
 const Posts = await Astro.glob("../content/blog/*.md");
 const categories = [...new Set(Posts.map(post => post.frontmatter.category))];

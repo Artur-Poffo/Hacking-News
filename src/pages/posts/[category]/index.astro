@@ -7,6 +7,15 @@ const Posts = await Astro.glob("../../../content/blog/*.md");
 const filtredPosts = Posts.filter(
 	(post) => post.frontmatter.category === Astro.params.category
 );
+
+export async function getStaticPaths() {
+	const Posts = await Astro.glob("../../../content/blog/*.md");
+	const categories = [...new Set(Posts.map(post => post.frontmatter.category))];
+
+	return categories.map(category => {
+		return {params: {category: category}}
+	})
+}
 ---
 
 <!DOCTYPE html>
