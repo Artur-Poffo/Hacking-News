@@ -1,33 +1,38 @@
 ---
-import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+export interface Props {
+  content: {
+    title: string
+    description: string
+    pubDate: string
+    heroImage: string
+    topics: string[]
+		category: string
+		slug: string
+  }
+}
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const {
+  content: { title, description, heroImage, pubDate }
+} = Astro.props
 ---
 
 <html lang="pt">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={heroImage} />
 	</head>
 
 	<body class="bg-zinc-900 text-zinc-200 scrollbar-thin scrollbar-thumb-zinc-800 scrollbar-track-zinc-900">
 		<Header />
-		<main>
-			<article>
-				{heroImage && <img width={720} height={360} src={heroImage} alt="Imagem do post" />}
-				<h1 class="title">{title}</h1>
-				{
-					updatedDate && (
-						<div class="last-updated-on">
-							Last updated on 26/05/2020
-						</div>
-					)
-				}
-				<hr />
+		<main class="min-h-screen flex flex-col items-center mt-24" >
+			<article class="max-w-screen-md px-4">
+				<img src={heroImage} alt="Imagem de capa do post" class="w-full object-cover rounded-3xl border border-solid border-zinc-600 mb-10">
+				<h1 class="font-mono text-3xl text-orange-500" >{title}</h1>
+				<span class="text-sm text-zinc-400" >{pubDate}</span>
+				<div class="w-full h-1 my-8 bg-orange-500" ></div>
 				<slot />
 			</article>
 		</main>

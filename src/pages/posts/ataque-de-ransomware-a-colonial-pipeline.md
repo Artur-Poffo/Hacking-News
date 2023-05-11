@@ -2,9 +2,11 @@
 title: "Ataque de Ransomware à Colonial Pipeline: Uma Ampla Consequência"
 heroImage: "https://images.unsplash.com/photo-1541728472741-03e45a58cf88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aGFja2VyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
 description: "Em maio de 2021, a Colonial Pipeline, foi alvo de um ataque cibernético devastador. Saiba mais sobre o ocorrido"
+layout: "../../layouts/BlogPost.astro"
 pubDate: "Segunda, 20 de fevereiro de 2023"
 topics: ["ataque", "noticia", "ransomware"]
 category: "trilha-de-tecnologias-digitais-filosofia"
+slug: "ataque-de-ransomware-a-colonial-pipeline"
 ---
 
 Em maio de 2021, a Colonial Pipeline, uma das principais operadoras de oleodutos nos Estados Unidos, sofreu um ataque cibernético devastador. O grupo de hackers responsável pelo ataque foi identificado como DarkSide, que criptografou os sistemas da empresa e exigiu um resgate em troca da chave de descriptografia. O incidente rapidamente chamou a atenção do mundo, pois a Colonial Pipeline é responsável por transportar cerca de 45% de todo o suprimento de combustível da Costa Leste dos EUA, abastecendo 50 milhões de pessoas em 13 estados.

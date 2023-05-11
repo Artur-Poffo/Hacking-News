@@ -1,10 +1,12 @@
 ---
 title: "A exclusão digital acentua desigualdade sociais e econômicas alertam especialistas"
 heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCzUMbFW6dc4GGIEKshAYgMKgwTH2chAKfgQ&usqp=CAU"
+layout: "../../layouts/BlogPost.astro"
 description: "Sobre exclusão digital"
 pubDate: "Sexta, 10 de março de 2023"
 topics: ["exclusão", "noticia", "tecnologia"]
 category: "trilha-de-tecnologias-digitais-geografia"
+slug: "a-exclusao-digital-acentua-desigualdade-sociais-e-economicas-alertam-especialistas"
 ---
 
 A exclusão digital é um problema que afeta milhões de pessoas em todo o mundo, especialmente aquelas que vivem em países em desenvolvimento e comunidades carentes. A lacuna tecnológica entre aqueles que têm acesso à tecnologia e aqueles que não têm tem se aprofundado ao longo dos anos, tornando-se uma barreira cada vez maior para a inclusão social e econômica.

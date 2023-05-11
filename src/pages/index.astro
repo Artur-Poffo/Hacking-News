@@ -1,7 +1,7 @@
 ---
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 
-const Posts = await Astro.glob("../content/blog/*.md");
+const Posts = await Astro.glob("./posts/*.md");
 const categories = [...new Set(Posts.map(post => post.frontmatter.category))];
 ---
 
@@ -12,7 +12,7 @@ const categories = [...new Set(Posts.map(post => post.frontmatter.category))];
 		<div class="flex gap-4 flex-wrap" >
 			{categories.map(category => {
 				return (
-				<a href={`/posts/${category}`} class="text-orange-500 underline text-lg">{category}</a>
+				<a href={`/categories/${category}`} class="text-orange-500 underline text-lg">{category}</a>
 				)
 			})}
 		</div>

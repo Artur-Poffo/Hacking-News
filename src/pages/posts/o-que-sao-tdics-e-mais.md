@@ -2,9 +2,11 @@
 title: "O que são TDICs e mais"
 heroImage: "https://sae.digital/wp-content/uploads/2021/02/TDIC.jpg"
 description: "Falando sobre TDICs e como elas influenciam no nosso dia a dia..."
+layout: "../../layouts/BlogPost.astro"
 pubDate: "Segunda, 27 de março de 2023"
 topics: ["TDICs", "informação", "tecnologia"]
 category: "trilha-de-tecnologias-digitais-historia"
+slug: "o-que-sao-tdics-e-mais"
 ---
 
 ## O que são?

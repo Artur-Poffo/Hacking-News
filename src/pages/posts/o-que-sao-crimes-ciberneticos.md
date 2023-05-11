@@ -2,9 +2,11 @@
 title: "O que são crimes cibernéticos?"
 heroImage: "https://images.unsplash.com/photo-1483817101829-339b08e8d83f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29kZSUyMGhhY2tlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
 description: "Neste post entenda o que são crimes cibernéticos e quais os principais métodos usados."
+layout: "../../layouts/BlogPost.astro"
 pubDate: "Terça, 21 de fevereiro de 2023"
 topics: ["conceito", "dicas", "hacking"]
 category: "trilha-de-tecnologias-digitais-filosofia"
+slug: "o-que-sao-crimes-ciberneticos"
 ---
 
 O crime cibernético é uma atividade criminosa que tem como alvo ou faz uso de um computador, uma rede de computadores ou um dispositivo conectado em rede. Não todos, mas a maioria dos crimes cibernéticos é cometida por cibercriminosos ou hackers que querem ganhar dinheiro. No entanto, ocasionalmente, o crime cibernético visa danificar computadores ou redes por outros motivos que não o lucro. Nesses casos, os motivos podem ser pessoais ou políticos.

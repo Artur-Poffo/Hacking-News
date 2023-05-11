@@ -1,0 +1,32 @@
+---
+import BlogPost from "../../components/BlogPost.astro";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+
+const allPosts = await Astro.glob("../posts/*.md")
+const filtredPosts = allPosts.filter(post => post.frontmatter.category === Astro.params.category)
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob("../posts/*.md")
+  const categories = [...new Set(allPosts.map(post => post.frontmatter.category))];
+  
+  return categories.map(category => {
+		return {params: {category: category}}
+	})
+}
+---
+
+<!DOCTYPE html>
+<DefaultLayout>
+  <div class="flex items-start justify-center flex-wrap gap-8" >
+    {filtredPosts.map(post => {
+      return (
+        <BlogPost 
+          title={post.frontmatter.title}
+          description={post.frontmatter.description}
+          image={post.frontmatter.heroImage}
+          slug={post.frontmatter.slug}
+        />
+      )
+    })}
+  </div>
+</DefaultLayout>

@@ -3,15 +3,11 @@ export interface Props {
   title: string;
   image: string;
   description: string;
-  category: string;
+  slug: string;
 }
 
-const { category, description, image, title } = Astro.props;
-const Link = `/posts/${category}/${title
-.toLocaleLowerCase()
-.replace(/\s/g, "-")
-.replace(/\?/g, "")}
-`
+const { description, image, title, slug } = Astro.props;
+const Link = `/posts/${slug}`
 ---
 
 <a href={Link} class="w-80 rounded bg-zinc-950 border border-solid border-zinc-600 flex flex-col gap-4">

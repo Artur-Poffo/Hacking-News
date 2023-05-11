@@ -2,9 +2,11 @@
 title: "Configurando um ambiente de desenvolvimento no Windows com o PowerShell"
 heroImage: "https://images.unsplash.com/photo-1642176849879-92f85770f212?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
 description: "Configurando do total zero um ambiente de desenvolvimento muito massa no Windows com PowerShell"
+layout: "../../layouts/BlogPost.astro"
 pubDate: "Quinta-Feira, 03 de Março de 2023"
 topics: ["configuração", "ambiente", "powershell"]
 category: "posts-pessoais"
+slug: "configurando-um-ambiente-de-desenvolvimento-no-windows-com-o-powershell"
 ---
 
 Existe muito conteúdo espalhado sobre "Como configurar o ambiente de desenvolvimento no Linux"

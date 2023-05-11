@@ -3,8 +3,10 @@ title: "Next.js para iniciantes"
 heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz0v5-AJn3oc2wlaoWUPSuyEP-LjH-l99-quE9uurhB1f0VjoEkIXR-r0uYS71oAcbaCk&usqp=CAU"
 description: "Entrando no mundo do Next.js! Para iniciantes"
 pubDate: "Segunda, 20 de fevereiro de 2023"
+layout: "../../layouts/BlogPost.astro"
 topics: ["next.js", "tutorial", "iniciantes"]
 category: "posts-pessoais"
+slug: "nextjs-para-iniciantes"
 ---
 
 O Next.js é um framework de React que permite criar aplicativos web do lado do servidor (server-side) e do lado do cliente (client-side) de forma fácil e rápida. Ele foi criado para solucionar problemas comuns enfrentados pelos desenvolvedores, como otimização de desempenho, SEO, roteamento e geração de páginas estáticas.
