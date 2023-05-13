@@ -28,12 +28,17 @@ const {
 	<body class="bg-zinc-900 text-zinc-200 scrollbar-thin scrollbar-thumb-zinc-800 scrollbar-track-zinc-900">
 		<Header />
 		<main class="min-h-screen flex flex-col items-center mt-24" >
-			<article class="max-w-screen-md px-4">
-				<img src={heroImage} alt="Imagem de capa do post" class="w-full object-cover rounded-3xl border border-solid border-zinc-600 mb-10">
-				<h1 class="font-mono text-3xl text-orange-500" >{title}</h1>
-				<span class="text-sm text-zinc-400" >{pubDate}</span>
-				<div class="w-full h-1 my-8 bg-orange-500" ></div>
-				<slot />
+			<article class="w-full md:max-w-screen-md px-4">
+				<header class="flex flex-col w-full" >
+					<img src={heroImage} alt="Imagem de capa do post" class="w-full object-cover rounded-3xl border border-solid border-zinc-600 mb-10">
+					<h1 class="font-mono font-bold text-3xl md:text-4xl text-orange-500" >{title}</h1>
+					<span class="text-md text-zinc-300" >Autor: Artur Poffo</span>
+					<span class="text-sm text-zinc-400">{pubDate}</span>
+					<div class="w-full h-1 my-8 bg-orange-500 rounded-xl" ></div>
+				</header>
+				<div class="prose prose-invert max-w-none break-words prose-h2:text-orange-500 prose-h2:font-mono prose-img:rounded-xl prose-a:underline prose-a:underline-offset-2 prose-a:decoration-orange-500 prose-a:transition-colors prose-a:font-normal hover:prose-a:text-orange-500" >
+					<slot />
+				</div>
 			</article>
 		</main>
 		<Footer />
