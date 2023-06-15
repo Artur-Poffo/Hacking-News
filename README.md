@@ -35,8 +35,6 @@ Hacking-News - is a blog created with the purpose of storing and grouping my sch
 
 ## Layout
 
-The application layout is available on Figma:
-
 ### Homepage
 <img src="https://github.com/Artur-Poffo/Hacking-News/blob/main/public/README/Home.png?raw=true" alt="Print of Homepage" />
 
