@@ -16,7 +16,7 @@
  <a href="#layout">Layout</a> • 
  <a href="#how-it-works">How it works</a> • 
  <a href="#tech-stack">Tech Stack</a> • 
- <a href="#author">Author</a> • 
+ <a href="#author">Author</a>
 </p>
 
 
@@ -34,8 +34,6 @@ Hacking-News - is a blog created with the purpose of storing and grouping my sch
 ---
 
 ## Layout
-
-The application layout is available on Figma:
 
 ### Homepage
 <img src="https://github.com/Artur-Poffo/Hacking-News/blob/main/public/README/Home.png?raw=true" alt="Print of Homepage" />
